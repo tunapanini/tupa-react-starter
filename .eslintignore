@@ -1,2 +1,4 @@
 # Ignore built files
 build/*
+
+!.*.js
