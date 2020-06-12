@@ -26,13 +26,14 @@ module.exports = {
         },
       },
     ],
-    "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
+    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx", ".tsx"] }],
     "no-use-before-define": ["error", "nofunc"],
     "no-param-reassign": [
       "error",
       { props: true, ignorePropertyModificationsForRegex: ["^registration$"] },
     ],
     quotes: ["error", "double"],
+    "import/no-extraneous-dependencies": ["error", { devDependencies: [".storybook/**", "**/*.stories.js"] }],
   },
   settings: {
     "import/resolver": {
