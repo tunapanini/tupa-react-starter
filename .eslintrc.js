@@ -18,7 +18,7 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "emotion"],
   rules: {
     "import/extensions": [
       "error",
@@ -44,6 +44,11 @@ module.exports = {
       "error",
       { devDependencies: [".storybook/**", "**/*.stories.js"] },
     ],
+    "emotion/jsx-import": "error",
+    "emotion/no-vanilla": "error",
+    "emotion/import-from-emotion": "error",
+    "emotion/styled-import": "error",
+    "emotion/syntax-preference": ["error", "string"],
   },
   settings: {
     "import/resolver": {
