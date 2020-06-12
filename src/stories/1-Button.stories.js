@@ -9,7 +9,9 @@ export default {
   decorators: [withKnobs],
 };
 
-export const withText = () => <Button onClick={action("clicked")}>Hello Button</Button>;
+export const withText = () => (
+  <Button onClick={action("clicked")}>Hello Button</Button>
+);
 
 export const withEmoji = () => (
   <Button onClick={action("clicked")}>

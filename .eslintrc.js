@@ -4,7 +4,12 @@ module.exports = {
     es2020: true,
     jest: true,
   },
-  extends: ["plugin:react/recommended", "airbnb"],
+  extends: [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -26,14 +31,19 @@ module.exports = {
         },
       },
     ],
-    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { extensions: [".js", ".jsx", ".tsx"] },
+    ],
     "no-use-before-define": ["error", "nofunc"],
     "no-param-reassign": [
       "error",
       { props: true, ignorePropertyModificationsForRegex: ["^registration$"] },
     ],
-    quotes: ["error", "double"],
-    "import/no-extraneous-dependencies": ["error", { devDependencies: [".storybook/**", "**/*.stories.js"] }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { devDependencies: [".storybook/**", "**/*.stories.js"] },
+    ],
   },
   settings: {
     "import/resolver": {
